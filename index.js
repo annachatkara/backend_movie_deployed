@@ -8,9 +8,9 @@ const API_KEY = process.env.API_KEY;
 
 // API endpoints
 const API_ENDPOINTS = {
-  movie: `https://backend-movie-deployed.onrender.com/api/folder/list?key=${API_KEY}&fld_id=117449&files=1`,
-  series: `https://backend-movie-deployed.onrender.com/api/folder/list?key=${API_KEY}&fld_id=117450`,
-  anime: `https://backend-movie-deployed.onrender.com/api/folder/list?key=${API_KEY}&fld_id=117451`
+  movie: `https://earnvidsapi.com/api/folder/list?key=${API_KEY}&fld_id=117449&files=1`,
+  series: `https://earnvidsapi.com/api/folder/list?key=${API_KEY}&fld_id=117450`,
+  anime: `https://earnvidsapi.com/api/folder/list?key=${API_KEY}&fld_id=117451`
 };
 
 function decodeHtmlEntities(text) {
@@ -171,7 +171,7 @@ app.get('/api/content', async (req, res) => {
 
 app.get('/get-folder-data/:fldId', async (req, res) => {
   const { fldId } = req.params;
-  const apiUrl = `https://backend-movie-deployed.onrender.com/api/folder/list?key=${API_KEY}&fld_id=${fldId}&files=1`;
+  const apiUrl = `https://earnvidsapi.com/api/folder/list?key=${API_KEY}&fld_id=${fldId}&files=1`;
 
   try {
     const response = await axios.get(apiUrl);
